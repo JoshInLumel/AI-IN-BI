@@ -50,17 +50,16 @@ const promptAI = async ({ systemContent, userContent }) => {
   });
 
   // console
-  console.log(response.data.choices[0].message.content);
+  console.log(response.data.choices[0].message.content, "ou@");
 };
 
 async function getAndStoreExcelData(filePath) {
-  const jsonData = ExcelImportService.importExcelAsJsonData(filePath);
-  console.log(jsonData, "jh@");
+  jsonData = ExcelImportService.importExcelAsJsonData(filePath);
 }
 
-async function executeAIRequestes() {
+async function executeAIRequestes(data) {
   await promptAI({
-    systemContent: `Generate a flat configuration for various types of expenses and output the complete configuration in JSON format`,
+    systemContent: `Generate a flat configuration for various types of expenses and output the complete configuration in JSON format. Use this data as a sample : ${data}`,
     userContent: `Each expense is identified by expenseId, with expenseAmount and expenseName as attributes in a list. Include expenseName options such as 'taxi', 'electricity bill', 'hospital and medication', 'shopping clothes', 'house rent', 'snacks', 'dinner', 'breakfast', 'drinks', 'school fees', 'water tax', and 'insurance'.`,
   });
 
@@ -72,7 +71,7 @@ async function executeAIRequestes() {
 
 async function main() {
   await getAndStoreExcelData(filePath);
-  // executeAIRequestes();
+  executeAIRequestes(JSON.stringify(jsonData));
 }
 
 main();

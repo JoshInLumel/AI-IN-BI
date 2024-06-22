@@ -12,8 +12,8 @@ const promptConfig = {
   },
   FINE_TUNE_TO_ADD_INCOME_ATTRIBUTE_FOR_SUB_EXPENSE_PROMPT: {
     systemContent: `Output the complete configuration in JSON format`,
-    userContent: `in the above generated data, populate each subexpense of a expense group with income attribute - the value of income attribute can be obtained fromn the Amount column of the given sample data - provided that the Income/Expense column's value should have the value
-      Income`,
+    userContent: `in the above generated data, populate each subexpense of a expense group with income attribute - the value of income attribute can be obtained fromn the Amount column of the given sample data - provided that the Income/Expense column's value should have the value/status as 
+      Income in order to retrieve the numerical value from Amount column and assign it as value to the income attribute`,
   },
 };
 

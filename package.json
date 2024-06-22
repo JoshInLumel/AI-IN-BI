@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^20.14.7",
     "dotenv": "^16.4.5",
-    "openai": "^3.0.0"
+    "openai": "^3.3.0",
+    "typescript": "^5.5.2"
   }
 }

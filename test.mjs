@@ -29,7 +29,7 @@ const filePath = path.resolve(
 // json data from excel data
 let jsonData = null;
 
-const promptAI = async ({ systemContent, userContent }) => {
+const promptAI = async ({ systemContent, userContent, isLog}) => {
   const messages = [
     {
       role: "system",
@@ -54,7 +54,8 @@ const promptAI = async ({ systemContent, userContent }) => {
     content: response.data.choices[0].message.content,
   });
 
-  // console
+
+  if(isLog)
   console.log(response.data.choices[0].message.content, "ou@");
 };
 
@@ -72,6 +73,7 @@ async function executeAIRequestes(data) {
           ? `${prompt.systemContent} consider this as the dataset: ${data}`
           : prompt.systemContent,
       userContent: prompt.userContent,
+      isLog:p===PROMPTS.length-1
     });
   }
 }

@@ -1,0 +1,207 @@
+{
+    "id": "summary",
+    "name": "Summary",
+    "formula": "income - expenses",
+    "periods": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "children": [
+        {
+            "id": "expenses",
+            "name": "Expenses",
+            "formula": "(travel + food + reward + shopping + tax + rent + utilities + communication + insurance + entertainment + education)",
+            "children": [
+                {
+                    "id": "travel",
+                    "name": "Travel",
+                    "values": {
+                        "series1": [400, 500, 600, 700, 800, 450, 550, 650, 750, 850, 500, 600],
+                        "series2": [420, 520, 620, 720, 820, 460, 560, 660, 760, 860, 510, 610]
+                    },
+                    "description": "Travel expenses for business and leisure"
+                },
+                {
+                    "id": "food",
+                    "name": "Food",
+                    "values": {
+                        "series1": [200, 300, 400, 500, 600, 250, 350, 450, 550, 650, 300, 400],
+                        "series2": [210, 310, 410, 510, 610, 260, 360, 460, 560, 660, 310, 410]
+                    },
+                    "description": "Expenses on meals and groceries"
+                },
+                {
+                    "id": "reward",
+                    "name": "Rewards",
+                    "values": {
+                        "series1": [50, 100, 150, 100, 20, 60, 110, 160, 110, 30, 70, 120],
+                        "series2": [55, 105, 155, 105, 25, 65, 115, 165, 115, 35, 75, 125]
+                    },
+                    "description": "Expenses for rewards and incentives"
+                },
+                {
+                    "id": "shopping",
+                    "name": "Shopping",
+                    "values": {
+                        "series1": [150, 300, 50, 10, 20, 200, 350, 100, 60, 70, 220, 370],
+                        "series2": [160, 310, 60, 20, 30, 210, 360, 110, 70, 80, 230, 380]
+                    },
+                    "description": "Expenses on personal shopping"
+                },
+                {
+                    "id": "tax",
+                    "name": "Taxes",
+                    "values": {
+                        "series1": [30, 60, 90, 120, 150, 40, 70, 100, 130, 160, 50, 80],
+                        "series2": [35, 65, 95, 125, 155, 45, 75, 105, 135, 165, 55, 85]
+                    },
+                    "description": "Tax expenses"
+                },
+                {
+                    "id": "rent",
+                    "name": "Rent",
+                    "values": {
+                        "series1": [200, 400, 600, 800, 1000, 250, 450, 650, 850, 1050, 300, 500],
+                        "series2": [210, 410, 610, 810, 1010, 260, 460, 660, 860, 1060, 310, 510]
+                    },
+                    "description": "Rent payments for housing or office space"
+                },
+                {
+                    "id": "utilities",
+                    "name": "Utilities",
+                    "formula": "(electricity + water + gas)",
+                    "children": [
+                        {
+                            "id": "electricity",
+                            "name": "Electricity",
+                            "values": {
+                                "series1": [50, 100, 100, 100, 100, 60, 110, 110, 110, 110, 70, 120],
+                                "series2": [55, 105, 105, 105, 105, 65, 115, 115, 115, 115, 75, 125]
+                            },
+                            "description": "Electricity bills"
+                        },
+                        {
+                            "id": "water",
+                            "name": "Water",
+                            "values": {
+                                "series1": [20, 40, 60, 80, 100, 30, 50, 70, 90, 110, 40, 60],
+                                "series2": [25, 45, 65, 85, 105, 35, 55, 75, 95, 115, 45, 65]
+                            },
+                            "description": "Water bills"
+                        },
+                        {
+                            "id": "gas",
+                            "name": "Gas",
+                            "values": {
+                                "series1": [30, 30, 10, 20, 10, 40, 40, 20, 30, 20, 50, 50],
+                                "series2": [35, 35, 15, 25, 15, 45, 45, 25, 35, 25, 55, 55]
+                            },
+                            "description": "Gas bills"
+                        }
+                    ]
+                },
+                {
+                    "id": "communication",
+                    "name": "Communication",
+                    "formula": "(phone + internet + mobile)",
+                    "children": [
+                        {
+                            "id": "phone",
+                            "name": "Phone",
+                            "values": {
+                                "series1": [30, 0, 0, 0, 0, 40, 10, 10, 10, 10, 50, 20],
+                                "series2": [35, 5, 5, 5, 5, 45, 15, 15, 15, 15, 55, 25]
+                            },
+                            "description": "Phone expenses"
+                        },
+                        {
+                            "id": "internet",
+                            "name": "Internet",
+                            "values": {
+                                "series1": [20, 140, 0, 60, 30, 30, 150, 10, 70, 40, 40, 160],
+                                "series2": [25, 145, 5, 65, 35, 35, 155, 15, 75, 45, 45, 165]
+                            },
+                            "description": "Internet expenses"
+                        },
+                        {
+                            "id": "mobile",
+                            "name": "Mobile",
+                            "values": {
+                                "series1": [40, 40, 40, 40, 40, 50, 50, 50, 50, 50, 60, 60],
+                                "series2": [45, 45, 45, 45, 45, 55, 55, 55, 55, 55, 65, 65]
+                            },
+                            "description": "Mobile phone expenses"
+                        }
+                    ]
+                },
+                {
+                    "id": "insurance",
+                    "name": "Insurance",
+                    "values": {
+                        "series1": [100, 100, 100, 100, 100, 110, 110, 110, 110, 110, 120, 120],
+                        "series2": [105, 105, 105, 105, 105, 115, 115, 115, 115, 115, 125, 125]
+                    },
+                    "description": "Insurance premiums"
+                },
+                {
+                    "id": "entertainment",
+                    "name": "Entertainment",
+                    "values": {
+                        "series1": [50, 70, 60, 80, 90, 60, 80, 70, 90, 100, 70, 90],
+                        "series2": [55, 75, 65, 85, 95, 65, 85, 75, 95, 105, 75, 95]
+                    },
+                    "description": "Expenses on movies, concerts, etc."
+                },
+                {
+                    "id": "education",
+                    "name": "Education",
+                    "values": {
+                        "series1": [200, 300, 400, 500, 600, 250, 350, 450, 550, 650, 300, 400],
+                        "series2": [210, 310, 410, 510, 610, 260, 360, 460, 560, 660, 310, 410]
+                    },
+                    "description": "Expenses on courses and learning materials"
+                }
+            ]
+        },
+        {
+            "id": "income",
+            "name": "Income",
+            "formula": "(salary + bonus + refund + investment)",
+            "children": [
+                {
+                    "id": "salary",
+                    "name": "Salary",
+                    "values": {
+                        "series1": [1000, 2000, 3000, 4000, 5000, 1500, 2500, 3500, 4500, 5500, 2000, 3000],
+                        "series2": [1100, 2100, 3100, 4100, 5100, 1600, 2600, 3600, 4600, 5600, 2100, 3100]
+                    },
+                    "description": "Monthly salary"
+                },
+                {
+                    "id": "bonus",
+                    "name": "Bonus",
+                    "values": {
+                        "series1": [200, 100, 150, 200, 100, 250, 150, 200, 250, 150, 300, 200],
+                        "series2": [210, 110, 160, 210, 110, 260, 160, 210, 260, 160, 310, 210]
+                    },
+                    "description": "Quarterly bonuses"
+                },
+                {
+                    "id": "refund",
+                    "name": "Refund",
+                    "values": {
+                        "series1": [150, 150, 250, 500, 100, 200, 200, 300, 550, 150, 250, 300],
+                        "series2": [160, 160, 260, 510, 110, 210, 210, 310, 560, 160, 260, 310]
+                    },
+                    "description": "Refunds received"
+                },
+                {
+                    "id": "investment",
+                    "name": "Investment",
+                    "values": {
+                        "series1": [100, 200, 300, 400, 500, 150, 250, 350, 450, 550, 200, 300],
+                        "series2": [110, 210, 310, 410, 510, 160, 260, 360, 460, 560, 210, 310]
+                    },
+                    "description": "Income from investments"
+                }
+            ]
+        }
+    ]
+}
